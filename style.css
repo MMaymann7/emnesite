@@ -13,11 +13,12 @@ main {
   margin-inline: auto;
 }
 body {
-  background-image: url(./imgs/concrete_background.avif);
-  background-size: stretch;
+  background-image: url(./imgs/concrete-wall-texture.webp);
+  background-size: contain;
   width: 100%;
 }
-/********** Generalt **********/
+
+/******************** Generalt ********************/
 img {
   width: 100%;
   height: auto;
@@ -69,41 +70,377 @@ p {
   margin-right: 10px;
   margin-bottom: 5px;
 }
-/********** Forside **********/
+
+/******************** Forside ********************/
 .forsidegrid_1 {
+  .forside_billede {
+    height: 800px;
+    width: 800px;
+  }
   p {
-    font-size: 1rem;
+    font-size: 1.5rem;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    padding: 2px;
   }
 }
 .forsidegrid_2 {
   background-color: rgb(53, 52, 52);
-  border-top: 3px solid #fc7001;
-  border-bottom: 3px solid #fc7001;
+  border-top: 5px solid #fc7001;
+  border-bottom: 5px solid #fc7001;
 }
-.chuck70 {
-  text-align: center;
+.musthave_slider {
+  overflow: hidden;
+  width: 100%;
 }
-.camobeanie {
-  text-align: center;
+.slider_track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+
+  animation: scroll 20s linear infinite;
 }
-.orangejacket {
-  text-align: center;
+.item {
+  flex-shrink: 0;
+  width: 220px;
+  p {
+    font-size: 1rem;
+    justify-content: center;
+  }
 }
-.maisonmargiela {
-  text-align: center;
+.item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
-/********** Menu **********/
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.forsidegrid_3 {
+  h2 {
+    margin-top: 20px;
+    font-size: 3rem;
+    padding: 2px;
+  }
+}
+.outfit1 {
+  width: 400px;
+  height: 600px;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+.outfit1 {
+  transition: transform 0.3s ease;
+}
+.outfit1:hover {
+  transform: translateY(-10px);
+}
+
+.outfit2 {
+  width: 400px;
+  height: 600px;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+.outfit2 {
+  transition: transform 0.3s ease;
+}
+.outfit2:hover {
+  transform: translateY(-10px);
+}
+
+.outfit3 {
+  width: 400px;
+  height: 600px;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+.outfit3 {
+  transition: transform 0.3s ease;
+}
+.outfit3:hover {
+  transform: translateY(-10px);
+}
+
+/******************** Styles ********************/
+.stylesgrid_1 {
+  padding: 10px;
+  background-color: rgb(53, 52, 52);
+  border-top: 5px solid #fc7001;
+  border-bottom: 5px solid #fc7001;
+}
+.stylesgrid_1 h1 {
+  font-size: 8rem;
+  line-height: 0.9;
+  margin-bottom: 20px;
+}
+.stylesflex {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.stylesflex img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.stylesgrid_2 {
+  padding: 20px 15px;
+}
+.card {
+  position: relative;
+  height: 700px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-content {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+}
+.card h2 {
+  font-size: 4rem;
+}
+.card button {
+  background: #ff6b00;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 999px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.card img {
+  transition: 0.4s;
+}
+.card:hover img {
+  transform: scale(1.08);
+}
+
+/******************** Season ********************/
+.season_cards {
+  border-top: 3px solid #ff6600;
+  border-bottom: 3px solid #ff6600;
+  .season_cards h2 {
+    font-size: 15rem;
+    font-weight: 900;
+    color: white;
+  }
+  button {
+    grid-column: 1;
+    background: #ff6b00;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 30px;
+    margin-top: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+}
+.winter_card {
+  background-image: url(./imgs/season_winterwallpaper.webp);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-top: 3px solid #ff6600;
+  border-bottom: 3px solid #ff6600;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 1fr 0.5fr 1fr;
+  height: 200px;
+  img {
+    grid-column: 3;
+    grid-row: 1 / 4;
+    height: 200px;
+    width: 200px;
+    object-fit: 100%;
+    z-index: 1;
+  }
+  h2 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    font-size: 7rem;
+    margin-bottom: 0;
+    padding-left: 3px;
+  }
+  button {
+    grid-column: 1 / 3;
+    grid-row: 2;
+  }
+}
+
+.spring_card {
+  background-image: url(./imgs/season_springwallpaper.webp);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-top: 3px solid #ff6600;
+  border-bottom: 3px solid #ff6600;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 1fr 0.5fr 1fr;
+  height: 200px;
+  img {
+    grid-column: 3;
+    grid-row: 1 / 4;
+    height: 200px;
+    width: 200px;
+    object-fit: 100%;
+    z-index: 1;
+  }
+  h2 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    font-size: 7rem;
+    margin: 0;
+    padding-left: 6px;
+  }
+  button {
+    grid-column: 1 / 3;
+    grid-row: 2;
+  }
+}
+
+.summer_card {
+  background-image: url(./imgs/season_summerwallpaper.webp);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-top: 3px solid #ff6600;
+  border-bottom: 3px solid #ff6600;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 1fr 0.5fr 1fr;
+  height: 200px;
+  img {
+    grid-column: 3;
+    grid-row: 1 / 4;
+    height: 200px;
+    width: 200px;
+    object-fit: 100%;
+    z-index: 1;
+  }
+  h2 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    font-size: 7rem;
+    margin: 0;
+    padding-left: 6px;
+  }
+  button {
+    grid-column: 1 / 3;
+    grid-row: 2;
+  }
+}
+
+.autumn_card {
+  background-image: url(./imgs/season_autumnwallpaper.webp);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-top: 3px solid #ff6600;
+  border-bottom: 3px solid #ff6600;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 1fr 0.5fr 1fr;
+  height: 200px;
+  img {
+    grid-column: 3;
+    grid-row: 1 / 4;
+    height: 200px;
+    width: 200px;
+    object-fit: 100%;
+    z-index: 1;
+  }
+  h2 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    font-size: 7rem;
+    margin: 0;
+    padding-left: 6px;
+  }
+  button {
+    grid-column: 1 / 3;
+    grid-row: 2;
+  }
+}
+
+/******************** About ********************/
+.about_us {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.25fr 0.25fr 1fr;
+  h1 {
+    grid-row: 1;
+    grid-column: span 2;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 7rem;
+    font-weight: 600;
+    padding: 2px;
+  }
+  h2 {
+    grid-row: 2;
+    grid-column: 1;
+    font-size: 3rem;
+    color: #fc7001;
+    padding: 2px;
+  }
+  p {
+    grid-column: 1;
+    font-size: 1.5rem;
+    padding: 2px;
+  }
+  img {
+    grid-row: 2 / 4;
+    height: 600px;
+    margin-bottom: 0;
+  }
+}
+.what_is {
+  padding: 10px;
+  background-color: rgb(53, 52, 52);
+  border-top: 5px solid #fc7001;
+  border-bottom: 5px solid #fc7001;
+  h2 {
+    font-size: 3rem;
+    padding: 2px;
+    color: #fc7001;
+  }
+  p {
+    font-size: 1.7rem;
+    padding: 2px;
+  }
+}
+/******************** Menu ********************/
 nav {
   /*Desktop*/
   display: flex;
+  justify-content: flex-end;
   align-items: center;
+
   @media (width < 800px) {
     /* Mobil */
     &.active .menu {
-      display: block;
-      background-color: #ffffff;
+      display: flex;
+      justify-content: space-around;
+      background-color: transparent;
       position: absolute;
-      top: 94px;
+      top: 70px;
       left: 0;
       width: 100%;
       box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
@@ -112,16 +449,23 @@ nav {
 
     &.active .menu li {
       margin: 10px 20px;
+      border-bottom: 3px solid white;
     }
 
     &.active .menu a {
-      font-size: 24px;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: 30px;
+      font-weight: 600;
+      color: white;
+    }
+    &.active .menu a:hover {
+      color: #fc7001;
     }
   }
 }
 .burger {
-  width: 30px;
-  height: 20px;
+  width: 40px;
+  height: 90px;
   cursor: pointer;
   display: none;
 
@@ -159,15 +503,21 @@ nav {
 header {
   position: sticky;
   top: 0;
+  width: 100%;
+  height: 90px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  justify-content: space-between;
+  padding: 0 30px;
+  box-sizing: border-box;
+  z-index: 3;
 }
-.logo img {
-  width: 50px;
-  height: 50px;
+
+.logo {
+  width: 80px;
+  height: 80px;
 }
+
 .menu {
   display: flex;
   list-style: none;
@@ -185,8 +535,10 @@ header {
 
 .menu a {
   display: block;
-  padding: 10px;
+  padding: 20px;
+  font-size: 2rem;
   color: white;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   text-decoration: none;
   transition: color 0.3s;
   text-align: end;
@@ -201,25 +553,31 @@ header {
     display: none;
   }
 }
-/********** Footer **********/
+
+/******************** Footer ********************/
 footer {
-  margin-top: 120px;
-  background-color: #ff6a00;
-  padding: 40px;
-  color: white;
+  background: #ff6b00;
 }
-footer img {
-  width: 200px;
-  margin-bottom: 20px;
-  border-radius: 0px;
+.footer_logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-footer a {
-  color: white;
-  text-decoration: none;
-  margin-inline: 10px;
-  font-size: 18px;
+.footer_logo img {
+  width: 700px;
+  max-width: 100%;
 }
 
-footer a:hover {
-  text-decoration: underline;
+.footer_links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.footer_links a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
 }

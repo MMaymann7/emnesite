@@ -2,4 +2,175 @@ main {
   max-width: 1200px;
   margin-inline: auto;
 }
-/*********** Forside ***********/
+/******************** Forside *********************/
+.forsidegrid_1 {
+  @media (width > 800px) {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr;
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
+.CURATiON_logo {
+  grid-column: 1 / span 3;
+  grid-row: 1 / 3;
+}
+.forside_billede {
+  grid-column: 2;
+  grid-row: 1 / 5;
+}
+.forside_tekst {
+  grid-column: 1;
+  grid-row: 3 / 4;
+}
+
+.forsidegrid_3 {
+  @media (width > 800px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+}
+.outfit1 {
+  grid-column: 1;
+  grid-row: 2;
+}
+.outfit2 {
+  grid-column: 2;
+  grid-row: 2;
+}
+.outfit3 {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+/******************** Styles ********************/
+.stylesgrid_1 {
+  h1 {
+    font-size: 10rem;
+    text-align: center;
+  }
+}
+.stylesgrid_2 {
+  @media (width > 800px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+/********************* Season *********************/
+.winter_card {
+  @media (width > 800px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    height: 700px;
+    img {
+      height: 700px;
+      width: auto;
+    }
+    h2 {
+      font-size: 21rem;
+    }
+    button {
+      height: 100px;
+      width: 600px;
+      font-size: 4rem;
+      font-weight: 600;
+    }
+  }
+}
+.spring_card {
+  @media (width > 800px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    height: 700px;
+    img {
+      height: 700px;
+      width: auto;
+    }
+    h2 {
+      font-size: 21rem;
+    }
+    button {
+      height: 100px;
+      width: 600px;
+      font-size: 4rem;
+      font-weight: 600;
+    }
+  }
+}
+.summer_card {
+  @media (width > 800px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    height: 700px;
+    img {
+      height: 700px;
+      width: auto;
+    }
+    h2 {
+      font-size: 21rem;
+    }
+    button {
+      height: 100px;
+      width: 600px;
+      font-size: 4rem;
+      font-weight: 600;
+    }
+  }
+}
+.autumn_card {
+  @media (width > 800px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    height: 700px;
+    img {
+      height: 700px;
+      width: auto;
+    }
+    h2 {
+      font-size: 21rem;
+    }
+    button {
+      height: 100px;
+      width: 600px;
+      font-size: 4rem;
+      font-weight: 600;
+    }
+  }
+}
+/******************** About ********************/
+.about_us {
+  @media (width > 800px) {
+    h1 {
+      font-size: 18rem;
+    }
+    h2 {
+      font-size: 7rem;
+    }
+    p {
+      font-size: 3rem;
+    }
+    img {
+      height: 1100px;
+      margin-bottom: 0;
+    }
+  }
+}
+.what_is {
+  @media (width > 800px) {
+    h2 {
+      font-size: 6rem;
+    }
+    p {
+      font-size: 3rem;
+    }
+  }
+}
